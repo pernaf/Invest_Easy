@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:inputType="numberDecimal"
             android:hint="0.0"
             android:textSize="32sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,6 +82,7 @@
             android:id="@+id/edt_rendimentos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="0.0" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,6 +109,7 @@
             android:id="@+id/edt_aporte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="inserir valor $" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,6 +136,7 @@
             android:id="@+id/edt_meses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:hint="inserir número de meses" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,6 +163,7 @@
             android:id="@+id/edt_juros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="Inserir juros %" />
     </com.google.android.material.textfield.TextInputLayout>
 
