@@ -3,11 +3,11 @@ package com.example.invest_easy
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.invest_easy.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
 
 
 
@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
+
         binding.btnLimpar.setOnClickListener {
             println("deu certo" + binding.edtAporte.text)
             println("deu certo" + binding.edtMeses.text)
@@ -23,9 +26,34 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        binding.btnCalcular.setOnClickListener {
 
+            val tempaporte = binding.edtAporte.text
+            val tempmeses = binding.edtMeses.text
+            val tempjuros = binding.edtJuros.text
 
+            if ( tempaporte?.isEmpty() == true ||
+                tempmeses?.isEmpty() == true ||
+                tempjuros?.isEmpty() == true
+                ) {
+                Snackbar
+                    .make(
+                        binding.edtAporte,
+                        "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG
+                    ).show()
 
+            } else {
 
+                val aporte: Float = binding.edtAporte.text.toString().toFloat()
+                val meses: Int = binding.edtMeses.text.toString().toInt()
+                val juros: Float = binding.edtJuros.text.toString().toFloat()
+
+                val total = aporte + meses + juros
+                println("aê bixão" + total)
+                binding.tvValorfinal.text = "$total"
+
+            }
+        }
     }
 }

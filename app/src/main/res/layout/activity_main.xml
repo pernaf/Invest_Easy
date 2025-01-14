@@ -29,28 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tinput_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginEnd="100dp"
-        app:hintEnabled="false"
-        app:boxBackgroundMode="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_valorFinal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:inputType="numberDecimal"
-            android:hint="0.0"
-            android:textSize="32sp" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tV_rendimentos"
@@ -199,5 +178,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tv_valorfinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:textAlignment="center"
+        android:text="0.0"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toTopOf="@+id/tV_rendimentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
