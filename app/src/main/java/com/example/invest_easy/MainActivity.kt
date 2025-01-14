@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.invest_easy.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,9 +50,15 @@ class MainActivity : AppCompatActivity() {
                 val meses: Int = binding.edtMeses.text.toString().toInt()
                 val juros: Float = binding.edtJuros.text.toString().toFloat()
 
-                val total = aporte + meses + juros
-                println("aê bixão" + total)
-                binding.tvValorfinal.text = "$total"
+                val decimalJuros = juros / 100
+
+                val montanteFinal = aporte * ((1 + decimalJuros).pow(meses) -1) / decimalJuros
+                val totalaporte = aporte * meses
+                val rendimentos = montanteFinal - totalaporte
+
+                binding.tvValorfinal.text = montanteFinal.toString()
+                binding.tvFinalrendimentos.text = rendimentos.toString()
+
 
             }
         }

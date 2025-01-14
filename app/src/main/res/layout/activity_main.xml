@@ -35,7 +35,7 @@
         android:id="@+id/tV_rendimentos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="72dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:text="valor de rendimentos:"
@@ -44,36 +44,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inpt_rendimentos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginStart="179dp"
-        android:layout_marginEnd="100dp"
-        app:hintEnabled="false"
-        app:boxBackgroundMode="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_rendimentos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="0.0" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_aporte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Aporte por mês"
-        android:layout_margin="16dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpt_rendimentos" />
+        app:layout_constraintTop_toBottomOf="@+id/tV_rendimentos" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_aporte"
@@ -189,9 +171,24 @@
         android:textAlignment="center"
         android:text="0.0"
         android:textSize="42sp"
+        android:maxLength="8"
         app:layout_constraintBottom_toTopOf="@+id/tV_rendimentos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <TextView
+        android:id="@+id/tv_finalrendimentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:textAlignment="center"
+        android:text="0.0"
+        android:maxLength="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_rendimentos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
