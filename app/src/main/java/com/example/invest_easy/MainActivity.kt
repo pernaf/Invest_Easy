@@ -4,20 +4,23 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.invest_easy.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import java.text.NumberFormat
+import java.util.Locale
 import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-
+    private fun formatarMoeda(valor: Double): String {
+        val formatador = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
+        return formatador.format(valor)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
 
         binding.btnLimpar.setOnClickListener {
@@ -56,8 +59,9 @@ class MainActivity : AppCompatActivity() {
                 val totalaporte = aporte * meses
                 val rendimentos = montanteFinal - totalaporte
 
-                binding.tvValorfinal.text = montanteFinal.toString()
-                binding.tvFinalrendimentos.text = rendimentos.toString()
+
+                binding.tvValorfinal.text = formatarMoeda(montanteFinal.toDouble())
+                binding.tvFinalrendimentos.text = formatarMoeda(rendimentos.toDouble())
 
 
             }
