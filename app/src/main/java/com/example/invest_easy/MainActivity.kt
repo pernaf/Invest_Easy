@@ -23,13 +23,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.btnLimpar.setOnClickListener {
-            println("deu certo" + binding.edtAporte.text)
-            println("deu certo" + binding.edtMeses.text)
-            println("deu certo" + binding.edtJuros.text)
-
-        }
-
         binding.btnCalcular.setOnClickListener {
 
             val tempaporte = binding.edtAporte.text
@@ -63,8 +56,18 @@ class MainActivity : AppCompatActivity() {
                 binding.tvValorfinal.text = formatarMoeda(montanteFinal.toDouble())
                 binding.tvFinalrendimentos.text = formatarMoeda(rendimentos.toDouble())
 
-
             }
         }
+
+        binding.btnLimpar.setOnClickListener {
+
+            binding.tvValorfinal.text = ""
+            binding.tvFinalrendimentos.text = ""
+            binding.edtAporte.setText("")
+            binding.edtMeses.setText("")
+            binding.edtJuros.setText("")
+
+        }
+
     }
 }
