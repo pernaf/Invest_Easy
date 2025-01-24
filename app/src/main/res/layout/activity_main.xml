@@ -161,7 +161,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="Inserir juros"
+            android:hint="inserir juros"
             android:textStyle="bold"
             android:textColorHint="@color/florest_green"
             android:textColor="@color/white"/>
