@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnLimpar.setOnClickListener {
 
-            binding.tvValorfinal.text = "0.0"
-            binding.tvFinalrendimentos.text = "0.0"
+            binding.tvValorfinal.text = "R$ 0,00"
+            binding.tvFinalrendimentos.text = "R$ 0,00"
             binding.edtAporte.setText("")
             binding.edtMeses.setText("")
             binding.edtJuros.setText("")
